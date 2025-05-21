@@ -26,66 +26,18 @@
   <!--=====JQUERY=======-->
   <script src="assets/js/jquery-3-7-1.min.js"></script>
   <!-- Add this script in the head section -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Function to check if element is in viewport
-    function isInViewport(element) {
-      const rect = element.getBoundingClientRect();
-      return (
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.bottom >= 0
-      );
-    }
 
-    // Function to handle lazy loading
-    function lazyLoadSections() {
-      const sections = document.querySelectorAll('#service, #project, .testimonial-section, .team6, .faq6, #contact, .footer5');
-      
-      sections.forEach(section => {
-        if (isInViewport(section) && !section.classList.contains('loaded')) {
-          section.classList.add('loaded');
-          // You can add any specific loading logic here if needed
-          console.log('Loading section:', section.id || section.className);
-        }
-      });
-    }
-
-    // Initial check
-    lazyLoadSections();
-    
-    // Check on scroll
-    window.addEventListener('scroll', lazyLoadSections);
-    
-    // Optional: Check on resize
-    window.addEventListener('resize', lazyLoadSections);
-  });
-</script>
-
-<!-- Add this style to initially hide sections -->
 <style>
-  #service:not(.loaded),
-  #project:not(.loaded),
-  .testimonial-section:not(.loaded),
-  .team6:not(.loaded),
-  .faq6:not(.loaded),
-  #contact:not(.loaded),
-  .footer5:not(.loaded) {
+  /* Lazy loading styles */
+  .lazy-section {
     opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s ease, height 0.5s ease;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   }
-
-  #service.loaded,
-  #project.loaded,
-  .testimonial-section.loaded,
-  .team6.loaded,
-  .faq6.loaded,
-  #contact.loaded,
-  .footer5.loaded {
+  
+  .lazy-section.loaded {
     opacity: 1;
-    height: auto;
-    overflow: visible;
+    transform: translateY(0);
   }
 </style>
 </head>
@@ -1434,7 +1386,49 @@
       });
     });
   </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Add lazy-section class to all sections after about
+    const sectionsToLazyLoad = [
+      document.getElementById('service'),
+      document.getElementById('project'),
+      document.querySelector('.testimonial-section'),
+      document.querySelector('.team6'),
+      document.querySelector('.faq6'),
+      document.getElementById('contact'),
+      document.querySelector('.footer5')
+    ];
+    
+    sectionsToLazyLoad.forEach(section => {
+      if (section) {
+        section.classList.add('lazy-section');
+      }
+    });
 
+    // Intersection Observer for lazy loading
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('loaded');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all lazy sections
+    sectionsToLazyLoad.forEach(section => {
+      if (section) {
+        observer.observe(section);
+      }
+    });
+  });
+</script>
 </body>
 
 </html>
