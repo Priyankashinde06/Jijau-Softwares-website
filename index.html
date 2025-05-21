@@ -234,7 +234,7 @@
         <div class="col-lg-6">
           <div class="images-all">
             <div class="image1">
-              <img src="assets/img/hero/hero7-image.webp" alt=""  loading="lazy">
+              <img rel="preload" src="assets/img/hero/hero7-image.png" alt=""  loading="lazy" as="image">
             </div>
             <div class="shape1 round-circle2">
               <img src="assets/img/shapes/hero7-shape1.png" alt=""  loading="lazy">
@@ -526,6 +526,8 @@
   <!--=====PROJECT AREA END=======-->
 
   <!--=====TESTIMONIAL AREA START=======-->
+
+  <!--=====TESTIMONIAL AREA START=======-->
   <div class="testimonial-section"
     style="background: #f9fafc; color: #333; padding: 80px 0; position: relative; overflow: hidden;">
     <!-- Decorative elements -->
@@ -579,7 +581,7 @@
                 <div
                   style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #6495ed; margin-right: 15px;">
                   <img src="assets/img/testimonial/tes6-img1.png" alt="Rhytham Oswal"
-                    style="width: 100%; height: 100%; object-fit: cover;"  loading="lazy">
+                    style="width: 100%; height: 100%; object-fit: cover;"  >
                 </div>
                 <div>
                   <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a2e;">Rhytham Oswal</h4>
@@ -612,7 +614,7 @@
                 <div
                   style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #6495ed; margin-right: 15px;">
                   <img src="assets/img/testimonial/unnamed.png" alt="Vivek Mohite"
-                    style="width: 100%; height: 100%; object-fit: cover;"  loading="lazy">
+                    style="width: 100%; height: 100%; object-fit: cover;"  >
                 </div>
                 <div>
                   <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a2e;">Vivek Mohite</h4>
@@ -645,7 +647,7 @@
                 <div
                   style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #6495ed; margin-right: 15px;">
                   <img src="assets/img/testimonial/tes6-img3.png" alt="Priti Chavan"
-                    style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    style="width: 100%; height: 100%; object-fit: cover;" >
                 </div>
                 <div>
                   <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a2e;">Priti Chavan</h4>
@@ -677,7 +679,7 @@
                 <div
                   style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #6495ed; margin-right: 15px;">
                   <img src="assets/img/testimonial/testimonial4.png" alt="Sayali Chavan"
-                    style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    style="width: 100%; height: 100%; object-fit: cover;" >
                 </div>
                 <div>
                   <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a2e;">Sayali Chavan</h4>
@@ -710,7 +712,7 @@
                 <div
                   style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #6495ed; margin-right: 15px;">
                   <img src="assets/img/testimonial/testimonial5.png" alt="Anjali Chavan"
-                    style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    style="width: 100%; height: 100%; object-fit: cover;" >
                 </div>
                 <div>
                   <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a2e;">Anjali Chavan</h4>
@@ -742,7 +744,7 @@
                 <div
                   style="width: 60px; height: 60px; border-radius: 50%; overflow: hidden; border: 2px solid #6495ed; margin-right: 15px;">
                   <img src="assets/img/testimonial/testimonial6.png" alt="Pratik Sawant"
-                    style="width: 100%; height: 100%; object-fit: cover;"  loading="lazy">
+                    style="width: 100%; height: 100%; object-fit: cover;"  >
                 </div>
                 <div>
                   <h4 style="margin: 0 0 5px 0; font-size: 18px; color: #1a1a2e;">Pratik Sawant</h4>
@@ -764,38 +766,7 @@
     </div>
   </div>
 
-  <script>
-    // Initialize Swiper
-    document.addEventListener('DOMContentLoaded', function () {
-      const swiper = new Swiper('.testimonialSwiper', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          // when window width is >= 768px
-          768: {
-            slidesPerView: 2,
-          },
-          // when window width is >= 992px
-          992: {
-            slidesPerView: 3,
-          }
-        }
-      });
-    });
-  </script>
+
   <!--=====TESTIMONIAL AREA END=======-->
 
   <!--=====TEAM AREA START=======-->
@@ -816,7 +787,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="600">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/ceo.png" alt="Rohit Bhole" class="team-circle-img"  loading="lazy">
+              <img src="assets/img/team/ceo.png" alt="Rohit Bhole" class="team-circle-img"  >
             </div>
             <div class="team-circle-info">
               <h4>Rohit Bhole</h4>
@@ -829,7 +800,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="600">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/ravina mam.jpg" alt="Ravina Shelke" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/ravina mam.jpg" alt="Ravina Shelke" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Ravina Shelke</h4>
@@ -842,7 +813,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="600">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/Team1.jpg" alt="Akash Pawar" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/Team1.jpg" alt="Akash Pawar" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Akash Pawar</h4>
@@ -855,7 +826,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="800">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/Team2.jpg" alt="Priyanka Shinde" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/Team2.jpg" alt="Priyanka Shinde" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Priyanka Shinde</h4>
@@ -868,7 +839,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="600">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/smita.jpg" alt="Smita Chavan" class="team-circle-img"  loading="lazy">
+              <img src="assets/img/team/smita.jpg" alt="Smita Chavan" class="team-circle-img"  >
             </div>
             <div class="team-circle-info">
               <h4>Smita Chavan</h4>
@@ -881,7 +852,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="1000">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/Team3.jpg" alt="Pragati More" class="team-circle-img" loading="lazy" >
+              <img src="assets/img/team/Team3.jpg" alt="Pragati More" class="team-circle-img"  >
             </div>
             <div class="team-circle-info">
               <h4>Pragati More</h4>
@@ -894,7 +865,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="1000">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/Team4.jpg" alt="Satyam Pawar" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/Team4.jpg" alt="Satyam Pawar" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Satyam Pawar</h4>
@@ -907,7 +878,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="1000">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/Team5.jpg" alt="Omkar Mahadik" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/Team5.jpg" alt="Omkar Mahadik" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Omkar Mahadik</h4>
@@ -920,7 +891,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="1000">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/vaishnavi.png" alt="Vaishnavi Shedge" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/vaishnavi.png" alt="Vaishnavi Shedge" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Vaishnavi Shedage</h4>
@@ -933,7 +904,7 @@
         <div class="col-lg-3 col-md-4 col-sm-6 col-8">
           <div class="team-circle-card" data-aos="zoom-in" data-aos-duration="1000">
             <div class="team-circle-img-container">
-              <img src="assets/img/team/priyanka.jpg" alt="Priyanka Mane" class="team-circle-img" loading="lazy">
+              <img src="assets/img/team/priyanka.jpg" alt="Priyanka Mane" class="team-circle-img" >
             </div>
             <div class="team-circle-info">
               <h4>Priyanka Mane</h4>
@@ -1030,7 +1001,7 @@
             <div class="faq-card">
               <div class="faq-card-inner">
                 <div class="faq-card-front">
-                  <img src="assets/img/logo/jijau software logo.png" alt="Jijau Software Logo" class="faq-logo" loading="lazy">
+                  <img src="assets/img/logo/jijau software logo.png" alt="Jijau Software Logo" class="faq-logo"  >
                 </div>
                 <div class="faq-card-back">
                   <div class="faq-card-content">
@@ -1159,7 +1130,7 @@
           <div class="single-footer-items footer-logo-area footer-information">
             <div class="footer-logo">
               <a href="#"><img src="assets/img/logo/jijau software.png" alt="Jijau Software Logo"
-                  style="width: 220px; height: auto; margin-left: -26px;"  loading="lazy"></a>
+                  style="width: 220px; height: auto; margin-left: -26px;"  ></a>
             </div>
             <div class="heading1">
               <p>At Jijau Software, we're dedicated to delivering innovative technology solutions tailored to meet
@@ -1257,28 +1228,57 @@
 
   <!--===== FOOTER AREA END =======-->
 
+ <!-- JavaScript files with defer attribute -->
+  <script src="assets/js/bootstrap.min.js" defer></script>
+  <script src="assets/js/aos.js" defer></script>
+  <script src="assets/js/fontawesome.js" defer></script>
+  <script src="assets/js/jquery.countup.js" defer></script>
+  <script src="assets/js/mobile-menu.js" defer></script>
+  <script src="assets/js/jquery.magnific-popup.js" defer></script>
+  <script src="assets/js/owl.carousel.min.js" defer></script>
+  <script src="assets/js/slick-slider.js" defer></script>
+  <script src="assets/js/gsap.min.js" defer></script>
+  <script src="assets/js/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/Splitetext.js" defer></script>
+  <script src="assets/js/text-animation.js" defer></script>
+  <script src="assets/js/swiper-bundle.js" defer></script>
+  <script src="assets/js/SmoothScroll.js" defer></script>
+  <script src="assets/js/jquery.lineProgressbar.js" defer></script>
+  <script src="assets/js/ripple-btn.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  
+  <!-- Image loading optimization script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Lazy load images with Intersection Observer
+      if ('IntersectionObserver' in window) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src || img.src;
+              img.srcset = img.dataset.srcset || img.srcset;
+              observer.unobserve(img);
+            }
+          });
+        });
 
-  <script src="assets/js/bootstrap.min.js"></script>
-  <script src="assets/js/aos.js"></script>
-  <script src="assets/js/fontawesome.js"></script>
-  <script src="assets/js/jquery.countup.js"></script>
-  <script src="assets/js/mobile-menu.js"></script>
-  <script src="assets/js/jquery.magnific-popup.js"></script>
-  <script src="assets/js/owl.carousel.min.js"></script>
-  <script src="assets/js/slick-slider.js"></script>
-  <script src="assets/js/gsap.min.js"></script>
-  <script src="assets/js/ScrollTrigger.min.js"></script>
-  <script src="assets/js/Splitetext.js"></script>
-  <script src="assets/js/text-animation.js"></script>
-  <script src="assets/js/swiper-bundle.js"></script>
-  <script src="assets/js/SmoothScroll.js"></script>
-  <script src="assets/js/jquery.lineProgressbar.js"></script>
-  <script src="assets/js/ripple-btn.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/validate.js"></script>
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        lazyImages.forEach(img => imageObserver.observe(img));
+      }
 
+      // Load high-res hero image after page load
+      const hero = document.querySelector('.hero7');
+      if (hero) {
+        const fullRes = hero.getAttribute('data-fullres');
+        if (fullRes) {
+          setTimeout(() => {
+            hero.style.backgroundImage = `url(${fullRes})`;
+          }, 1000);
+        }
+      }
+    });
+  </script>
   <script>
     // JavaScript for Interactive Hover Effects
     document.addEventListener('DOMContentLoaded', function () {
@@ -1367,6 +1367,38 @@
             loadingSpinner.style.display = 'none';
             submitButton.classList.remove('disabled');
           });
+      });
+    });
+  </script>
+    <script>
+    // Initialize Swiper
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.testimonialSwiper', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 992px
+          992: {
+            slidesPerView: 3,
+          }
+        }
       });
     });
   </script>
