@@ -38,8 +38,7 @@
     }
 
     .cta-content{
-                display: flex !important
-;
+                display: flex !important;
         justify-content: center !important;
         margin-left: -8% !important;
     }
@@ -64,8 +63,6 @@
     li {
         list-style: none;
     }
-
-
 
     /*Menu Css*/
 
@@ -164,7 +161,9 @@
         margin-top: -24px;
     }
 
-
+  .image2{
+        bottom: -12% !important;
+  }
     .mobile-sidebar.mobile-menu-active {
         left: 0;
         visibility: visible;
