@@ -1278,7 +1278,7 @@
   <script src="assets/js/ripple-btn.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/validate.js"></script>
+  <script src="assets/js/validate.js" defer></script>
   <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
   <script>
@@ -1372,6 +1372,31 @@
       });
     });
   </script>
+  <!-- Add this script in the head to handle preloader completion -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Don't wait for all images, just a reasonable time
+    setTimeout(function() {
+      document.getElementById('preloader').style.display = 'none';
+      document.body.classList.remove('preloader-active');
+    }, 2000); // 2 seconds max for preloader
+    
+    // Count loaded images and hide preloader when critical ones are loaded
+    let criticalImages = ['logo', 'hero-image'];
+    let loadedCount = 0;
+    
+    document.querySelectorAll('img').forEach(img => {
+      if(criticalImages.some(alt => img.alt.includes(alt))) {
+        img.addEventListener('load', function() {
+          loadedCount++;
+          if(loadedCount >= criticalImages.length) {
+            document.getElementById('preloader').style.display = 'none';
+          }
+        });
+      }
+    });
+  });
+</script>
 
 </body>
 
