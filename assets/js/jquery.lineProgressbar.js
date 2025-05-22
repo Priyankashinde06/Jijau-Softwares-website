@@ -1,9 +1,3 @@
-/**
- * jQuery Line Progressbar
- * Author: KingRayhan<rayhan095@gmail.com>
- * Author URL: https://electronthemes.com
- * Version: 1.1.2
- */
 
 ;(function($) {
     'use strict'
